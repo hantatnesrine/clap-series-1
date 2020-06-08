@@ -10,6 +10,10 @@
 
 function increment(number) {
   // CODE HERE
+  // on verifie si number est un nombre
+  if (isNaN(number)){return number +' doit etre un nombre'}
+  else { return number+1}
+
 }
 
 export { increment };
