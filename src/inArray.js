@@ -7,6 +7,7 @@
  */
 function inArray(ary, val) {
   // CODE HERE
+  return (ary.inludes(val))
 }
 
 export { inArray };
