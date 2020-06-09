@@ -10,8 +10,23 @@
  * ary = ['un', 'plus', 'grand', 'tableau'] alors midArray(ary) retournera 'plusgrand'
  * - Si le tableau est vide, je retourne le mot 'rien'
  */
+function midArray(ary){
+  if(ary.length % 2 !== 0)// nombre d'element impair
+  {
+    return ary[Math.trunc(ary.length/2)]
+  }
+  if (ary.length % 2 == 0) //nombre d'elment pair
+  {
+    return ary[(ary.length / 2)-1] + ary[ary.length / 2]
+  }
+  if (ary == undefined || ary.length == 0){ // array non defini ou vide
+    return 'rien'
+  }
+}
+
 function funnyArray(ary) {
   // CODE HERE
+    midArray(ary)
 }
 
 export { funnyArray };
