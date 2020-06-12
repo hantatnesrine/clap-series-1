@@ -12,6 +12,9 @@ const SOLAR_SYSTEM =
 
 function position(planet) {
   // CODE HERE
+  let sanitizePlanet =
+  planet.chatAt(0).toUpperCase()+planet.slice(1).toLowerCase()
+  return SOLAR_SYSTEM.indexOf(sanitizePlanet);
 }
 
 export { position };

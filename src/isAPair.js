@@ -12,6 +12,29 @@
 
 function isAPair(cards) {
   // CODE HERE
+  // recuperer les types
+  var types=[];
+  cards.forEach (function(card){
+      types.push(card.charAt(0))  
+  })
+console.log(types)
+// compter le nombre d'occurence
+var result = {};
+types.forEach(function(elem){
+  if(elem in result){
+    result[elem] = ++result[elem];
+  }
+  else{
+    result[elem] = 1;
+  }
+});
+const tabType = (Object.values(result))
+
+
+// checks whether an element is same
+const same = (element) => element  === element;
+
+return tabType.some(same);
 }
 
 export { isAPair };

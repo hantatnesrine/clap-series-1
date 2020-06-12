@@ -13,7 +13,7 @@ function increment(number) {
   // on verifie si number est un nombre
   if (isNaN(number)){return number +' doit être un nombre !'}
   else { return number+1}
-
+// return '${number}' doit etre un nombre !' interpolation
 }
 
 export { increment };
