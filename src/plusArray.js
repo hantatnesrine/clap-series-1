@@ -6,12 +6,9 @@
  * alors plusArray(arr1, arr2) retournera 30 
  */
 function plusArray(arr1, arr2) {
-  // CODE HERE
-  let somme=0
-  for (let i=0; i<arr1.length; i++){
-      somme= somme+arr1[i]+arr2[i]
-    }
-  return somme
+ 
+    return   arr1.reduce((a, b)=> a + b, 0) + arr2.reduce((a, b)=> a + b, 0);
+  
 }
 
 export { plusArray };
