@@ -10,20 +10,31 @@
  * - Le type de la carte (ordre croissant) : d => ♦, c => ♣, h => ♥, s => ♠
  * 
  */
-function dealer() {
-  // CODE HERE
-  //valeur carte
+function cardGenerator(){
+  // valeur et type des cartes
   let carteVal = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
-  // type d'une carte
   let carteType = ["d", "c", "h", "s"];
-  // carte 
-  let cartes = [];
-  for (let i = 0; i< carteVal.length(); i++){
-    for(let j=0 ; j< carteType.length(); j++){
-      cartes.push(carteVal[i]+carteType[j])
+
+  let hand =[];
+  while (hand.length !== 5){
+      // generer une carte aleatoire
+      let randomVal = carteVal[Math.floor(Math.random() * carteVal.length)];
+      let randomType = carteType[Math.floor(Math.random() * carteType.length)];
+      let randomCarte= randomVal+randomType; // carte aleatoire
+			
+      if(! hand.includes(randomCarte) ){
+        hand.push(randomCarte);
+      }else{
+        card = randomCarte;
+      }
     }
-  }
-  
+  return hand
+}
+function dealer() {
+let di=[]
+di[0] = cardGenerator()
+di[1] = cardGenerator()
+return di
 }
 
 export { dealer };
