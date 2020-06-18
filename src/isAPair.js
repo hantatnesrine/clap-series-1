@@ -9,7 +9,6 @@
  * - La valeur de la carte : 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A
  * - Le type de la carte : s => ♠, h => ♥, c => ♣, d => ♦
  */
-
 function isAPair(cards) {
   // CODE HERE
   // recuperer les types
@@ -17,8 +16,6 @@ function isAPair(cards) {
   cards.forEach (function(card){
       types.push(card.charAt(0))  
   })
-console.log(types)
-// compter le nombre d'occurence
 var result = {};
 types.forEach(function(elem){
   if(elem in result){
@@ -28,13 +25,9 @@ types.forEach(function(elem){
     result[elem] = 1;
   }
 });
-const tabType = (Object.values(result))
-
-
-// checks whether an element is same
-const same = (element) => element  === element;
-
-return tabType.some(same);
+  return (Object.values(result).includes(2))
 }
+
+
 
 export { isAPair };
