@@ -26,14 +26,9 @@ function cardGenerator(){
         hand.push(randomCarte);
       }
     }
-  let tab1=[]
-  let tab2=[]
-  for(let i=0,j=5; i<5, j<10; i++, j++){
-    tab1.push(hand[i]);
-    tab2.push(hand[j]);
-  }
+ 
 
-  return  [tab1, tab2]
+  return  [hand.slice(0,5), hand.slice(5,10)]
 }
 function dealer() {
 return cardGenerator()
