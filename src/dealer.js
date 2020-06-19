@@ -16,25 +16,29 @@ function cardGenerator(){
   let carteType = ["d", "c", "h", "s"];
 
   let hand =[];
-  while (hand.length !== 5){
+  while (hand.length !== 10){
       // generer une carte aleatoire
       let randomVal = carteVal[Math.floor(Math.random() * carteVal.length)];
       let randomType = carteType[Math.floor(Math.random() * carteType.length)];
       let randomCarte= randomVal+randomType; // carte aleatoire
 			
-      if(! hand.includes(randomCarte) ){
+      while(! hand.includes(randomCarte) ){
         hand.push(randomCarte);
-      }else{
-        card = randomCarte;
       }
     }
-  return hand
+  let tab1=[]
+  let tab2=[]
+  for(let i=0,j=5; i<5, j<10; i++, j++){
+    tab1.push(hand[i]);
+    tab2.push(hand[j]);
+  }
+
+  return  [tab1, tab2]
 }
 function dealer() {
-let di=[]
-di[0] = cardGenerator()
-di[1] = cardGenerator()
-return di
+return cardGenerator()
 }
+
+dealer();
 
 export { dealer };
