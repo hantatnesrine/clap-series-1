@@ -30,15 +30,17 @@ function orderCards(cards){
 
         cards.sort(
           function(a, b){
-            let i=0;
-            let j=0;
+            //let indexA = sortBy.indexOf(a);
+            //let indexB = sortBy.indexOf(b);
+            /*let i=0, j=0;
             while(sortBy[i] !== a){
               i++;
             };
             while(sortBy[j] !== b){
               j++;
             };
-            return i<j ? -1 : 1
+            */
+            return sortBy.indexOf(a)< sortBy.indexOf(b) ? -1 : 1
           }
         );
         return cards;
